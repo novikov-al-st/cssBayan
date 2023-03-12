@@ -154,8 +154,16 @@ body {
 @media (hover:hover) and (pointer: fine) {
     .accordion__item-line,
     .accordion__item-text,
-    .accordion__item-image-container{
+    .accordion__item-image-container,
+    .accordion__items-section {
         cursor: pointer;
+    }
+
+    .accordion__item-line:active,
+    .accordion__item-text:active,
+    .accordion__item-image-container:active,
+    .accordion__items-section:active {
+        cursor: move;
     }
 
     .accordion__item-text-image {
