@@ -42,7 +42,7 @@ body {
 }
 
 .accordion__item-line {
-    border: 2px solid rgba(77, 91, 94, 0.5);
+    border: 0.1rem solid rgba(77, 91, 94, 0.5);
     margin: 2rem 0;
 }
 
@@ -90,7 +90,7 @@ body {
 .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container  .accordion__item-image {
     width: 30%;
     aspect-ratio: 1 / 1;
-    border: 2px solid rgba(13, 64, 73, 0.5);
+    border: 0.1rem solid rgba(13, 64, 73, 0.5);
     display: block;
     transition: all .4s linear;
 }
@@ -117,7 +117,7 @@ body {
     .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container .accordion__item-image {
         width: 70%;
         aspect-ratio: 1 / 1;
-        border: 2px solid rgba(13, 64, 73, 0.5);
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
         display: block;
         transition: all .4s linear;
     }
@@ -145,7 +145,7 @@ body {
     .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container .accordion__item-image {
         width: 80%;
         aspect-ratio: 1 / 1;
-        border: 2px solid rgba(13, 64, 73, 0.5);
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
         display: block;
         transition: all .4s linear;
     }
@@ -174,7 +174,7 @@ body {
     .accordion__item:hover .accordion__item-checkbox:not(:checked) + .accordion__item-label .accordion__item-image-container  .accordion__item-image {
         width: 30%;
         aspect-ratio: 1 / 1;
-        border: 2px solid rgba(13, 64, 73, 0.5);
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
         display: block;
         transition: all .4s linear;
     }
