@@ -124,7 +124,31 @@ body {
 }
 
 @media screen and (max-width: 320px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+    }
 
+    .accordion__title {
+        font-size: 2rem;
+    }
+
+    .accordion__item-title {
+        font-size: 1rem;
+    }
+
+    .accordion__item-text-image {
+        max-width: 1rem;
+    }
+
+    .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container .accordion__item-image {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        border: 2px solid rgba(13, 64, 73, 0.5);
+        display: block;
+        transition: all .4s linear;
+    }
 }
 
 @media (hover:hover) and (pointer: fine) {
