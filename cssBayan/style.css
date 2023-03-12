@@ -1,0 +1,189 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-style: normal;
+    color: rgb(29, 14, 14);
+}
+
+.container {
+    max-width: 1920px;
+    margin: auto 10%;
+}
+
+.header {
+    margin: 4rem auto;
+}
+
+.accordion__title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.accordion__item-checkbox {
+    display: none;
+}
+
+.accordion__item {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: auto 1rem;
+}
+
+.accordion__item-line {
+    border: 0.1rem solid rgba(77, 91, 94, 0.5);
+    margin: 2rem 0;
+}
+
+.accordion__item-label {
+    color: rgb(51, 51, 184);
+    transition: all .2s linear;
+}
+
+.accordion__item-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.accordion__item-text-image {
+    max-width: 2rem;
+    aspect-ratio: 1 / 1;
+    display: block;
+    margin: 0 1rem;
+    transition: all .2s linear;
+}
+
+.accordion__item-checkbox:checked + .accordion__item-label .accordion__item-text .accordion__item-text-image {
+    transform: rotate(45deg);
+    transition: all .2s linear;
+}
+
+.accordion__item-checkbox:checked + .accordion__item-label {
+    color: rgb(29, 14, 14);
+}
+
+.accordion__item-title {
+    margin: auto 0.5rem;
+}
+
+.accordion__item-image {
+    width: 0;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    display: block;
+    transition: all .2s linear;
+}
+
+.accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container  .accordion__item-image {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    border: 0.1rem solid rgba(13, 64, 73, 0.5);
+    display: block;
+    transition: all .2s linear;
+}
+
+@media screen and (max-width: 820px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 3rem auto;
+    }
+
+    .accordion__title {
+        font-size: 3rem;
+    }
+
+    .accordion__item-title {
+        font-size: 1.5rem;
+    }
+
+    .accordion__item-text-image {
+        max-width: 1.5rem;
+    }
+
+    .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container .accordion__item-image {
+        width: 70%;
+        aspect-ratio: 1 / 1;
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
+        display: block;
+        transition: all .2s linear;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+    }
+
+    .accordion__title {
+        font-size: 2rem;
+    }
+
+    .accordion__item-title {
+        font-size: 1rem;
+    }
+
+    .accordion__item-text-image {
+        max-width: 1rem;
+    }
+
+    .accordion__item-checkbox:checked + .accordion__item-label .accordion__item-image-container .accordion__item-image {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
+        display: block;
+        transition: all .2s linear;
+    }
+}
+
+@media (hover:hover) and (pointer: fine) {
+    .accordion__item-line,
+    .accordion__item-text,
+    .accordion__item-image-container,
+    .accordion__items-section {
+        cursor: pointer;
+    }
+
+    .accordion__item-line:active,
+    .accordion__item-text:active,
+    .accordion__item-image-container:active,
+    .accordion__items-section:active {
+        cursor: move;
+    }
+
+    .accordion__item-text-image {
+        display: none;
+    }
+
+    .accordion__items-section:hover .accordion__item .accordion__item-label .accordion__item-text .accordion__item-text-image {
+        display: block;
+    }
+
+    .accordion__items-section:hover .accordion__item .accordion__item-label .accordion__item-text {
+        transition: all .2s linear;
+        color: rgb(29, 14, 14);
+    }
+
+    .accordion__item:hover .accordion__item-checkbox:not(:checked) + .accordion__item-label .accordion__item-image-container  .accordion__item-image {
+        width: 30%;
+        aspect-ratio: 1 / 1;
+        border: 0.1rem solid rgba(13, 64, 73, 0.5);
+        display: block;
+        transition: all .2s linear;
+    }
+}
